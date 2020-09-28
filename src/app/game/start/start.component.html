@@ -1,4 +1,4 @@
-<div class="card text-center">
+<div class="card text-center mx-3 my-3">
     <div class="card-header">
       Add your key-value pairs
     </div>
@@ -9,22 +9,43 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">Query:</span>
         </div>
-        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Large"
+          aria-describedby="inputGroup-sizing-sm"
+          [(ngModel)]="queryInput"
+        >
       </div>
 
       <div class="input-group input-group-lg my-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">Definition:</span>
         </div>
-        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        <input 
+        type="text" 
+        class="form-control" 
+        aria-label="Large" 
+        aria-describedby="inputGroup-sizing-sm"
+        [(ngModel)]="defInput">
       </div>
 
       <div class="d-flex justify-content-around">
-      <a href="#" class="btn btn-lg btn-primary">Add</a>
-      <a href="#" class="btn btn-lg btn-danger">Start</a>
+        <a class="btn btn-lg btn-danger disabled">Start</a>
+        <a class="btn btn-lg btn-primary" (click)="addFlashCard()">Add</a>
     </div>
     </div>
     <div class="card-footer text-muted">
-      
+      TESTING AREA: {{flashCards}}
     </div>
   </div>
+
+
+  <!--Card Container-->
+  <div class="container d-flex flex-wrap justify-content-center">
+
+    <!--Card-->
+<app-flashcard *ngFor="let card of flashCards"></app-flashcard>
+
+  </div>
+
