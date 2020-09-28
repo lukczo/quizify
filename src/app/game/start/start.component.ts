@@ -1,3 +1,4 @@
+import { identifierModuleUrl } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -15,14 +16,23 @@ export class StartComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  validateAdd() {
+    return !this.queryInput || !this.defInput ? true : false;
+  }
+
+  validateStart() {
+    return this.flashCards.length < 4 ? true : false;
+  }
   addFlashCard() {
     const queri = this.queryInput;
     const defi = this.defInput;
+    const id = Math.floor(Math.random() * 1000);
 
     this.queryInput = null;
     this.defInput = null;
     
-    const flashCard =  {'Query': queri,'Definition': defi}
+    const flashCard =  {'id': id, 'Query': queri,'Definition': defi}
     this.flashCards.push(flashCard)
 
     console.log(this.flashCards);
