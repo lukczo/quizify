@@ -1,5 +1,5 @@
 <div class="card text-center mx-3 my-3">
-    <div class="card-header">
+    <div class="card-header" (click)="getData(flashCards)">
         Correct Answers: | Wrong Answers:
     </div>
     <div class="card-body">
@@ -9,7 +9,7 @@
         <div class="input-group-prepend mr-3">
           <span class="input-group-text" id="inputGroup-sizing-lg">Question:</span>
         </div>
-<h2>BBBB</h2>
+<h2>{{currentQuery['Query']}}</h2>
 
       </div>
 
@@ -19,17 +19,17 @@
         <a
           class="btn btn-lg btn-primary"
 
-        >A</a>
+        >{{currentQuery['Definition']}}</a>
         <a
           class="btn btn-lg btn-primary"
 
-        >A</a>
+        >{{wrongAnswers}}</a>
         <a
         class="btn btn-lg btn-primary"
-      >A</a>
+      >{{wrongAnswers}}</a>
       <a
       class="btn btn-lg btn-primary"
-    >A</a>
+    >{{wrongAnswers}}</a>
     </div>
     </div>
     <div class="card-footer text-muted">
