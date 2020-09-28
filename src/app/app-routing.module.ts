@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { WelcomeComponent } from './core/welcome/welcome.component';
 import { StartComponent } from './game/start/start.component';
+import { PlayComponent } from './game/play/play.component';
 
 
 const routes: Routes = [
@@ -13,8 +14,12 @@ const routes: Routes = [
         path: '', redirectTo: 'home', pathMatch: 'full'
     },
     {
-        path: 'play',
+        path: 'start',
         component: StartComponent
+    }, 
+    {
+        path: 'play',
+        component: PlayComponent
     }
 ];
 

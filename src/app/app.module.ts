@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { StartComponent } from './game/start/start.component';
 import { FlashcardComponent } from './game/flashcard/flashcard.component';
+import { PlayComponent } from './game/play/play.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FlashcardComponent } from './game/flashcard/flashcard.component';
     NavbarComponent,
     WelcomeComponent,
     StartComponent,
-    FlashcardComponent
+    FlashcardComponent,
+    PlayComponent
   ],
   imports: [
     BrowserModule,
