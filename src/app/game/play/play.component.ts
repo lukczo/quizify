@@ -24,7 +24,7 @@ export class PlayComponent implements OnInit {
     return drawnQ
   }
 
-  shuffleArray(array): Array {
+  shuffleArray(array): Array<Object> {
     console.log('at start of func:', array);
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
